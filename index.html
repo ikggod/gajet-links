@@ -4,37 +4,47 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>가젯연구소 · 가성비 IT/가전/가젯 큐레이션</title>
+<meta name="description" content="직접 써보고 고른 가성비 IT·가전·가젯. 쿠팡 최저가로 바로 연결."/>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:"Pretendard","Apple SD Gothic Neo","Segoe UI",system-ui,sans-serif;
        background:radial-gradient(900px 500px at 50% -5%,#16203a,#0a0e1a 60%);color:#eaf0fb;
-       min-height:100vh;padding:28px 18px 60px;-webkit-font-smoothing:antialiased}
+       min-height:100vh;padding:24px 18px 56px;-webkit-font-smoothing:antialiased}
   .wrap{max-width:480px;margin:0 auto}
-  .head{text-align:center;margin-bottom:26px}
+  .head{text-align:center;margin-bottom:18px}
   .logo{width:74px;height:74px;border-radius:20px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;
         font-size:38px;background:linear-gradient(145deg,#1d2945,#121a30);border:2px solid #ffd479;box-shadow:0 8px 30px rgba(0,0,0,.4)}
   .name{font-size:22px;font-weight:800}
   .name b{color:#ffd479}
   .desc{font-size:13.5px;color:#9fb0d0;margin-top:6px;line-height:1.5}
-  .tag{display:inline-block;margin-top:10px;font-size:11.5px;color:#7fe0c0;background:rgba(50,200,160,.12);
+  .tag{display:inline-block;margin-top:11px;font-size:11.5px;color:#7fe0c0;background:rgba(50,200,160,.12);
        border:1px solid rgba(80,220,180,.3);padding:4px 11px;border-radius:999px}
-  .sec{font-size:12px;color:#7f8db0;letter-spacing:.5px;margin:24px 4px 12px;font-weight:600}
-  .card{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;
+  .follow{display:inline-flex;align-items:center;gap:6px;margin-top:11px;margin-left:6px;font-size:11.5px;color:#ffd479;
+       background:rgba(255,212,121,.1);border:1px solid rgba(255,212,121,.35);padding:4px 11px;border-radius:999px;text-decoration:none}
+  .lead{text-align:center;font-size:12.5px;color:#8fa0c0;margin:14px 4px 2px}
+  .sec{font-size:12.5px;color:#9fb0d0;letter-spacing:.3px;margin:22px 4px 12px;font-weight:700;display:flex;align-items:center;gap:7px}
+  .sec .line{flex:1;height:1px;background:linear-gradient(90deg,#25324f,transparent)}
+  .card{display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;position:relative;
         background:linear-gradient(145deg,#141d33,#101729);border:1px solid #25324f;border-radius:16px;
         padding:12px;margin-bottom:13px;transition:transform .15s,border-color .15s}
   .card:active{transform:scale(.98)}
   .card:hover{border-color:#3a4a72}
-  .thumb{width:72px;height:72px;border-radius:12px;object-fit:cover;background:#0c1426;flex:none}
+  .card.hot{border-color:#3a3050;background:linear-gradient(145deg,#1a1730,#12101f)}
+  .thumb{width:74px;height:74px;border-radius:12px;object-fit:cover;background:#0c1426;flex:none}
   .ci{flex:1;min-width:0}
   .ct{font-size:15px;font-weight:700;line-height:1.3}
-  .cs{font-size:12.5px;color:#9fb0d0;margin-top:4px}
-  .cprice{font-size:13px;color:#ffd479;font-weight:700;margin-top:5px}
-  .go{flex:none;font-size:12.5px;font-weight:700;color:#06203f;background:#ffd479;
-      padding:9px 13px;border-radius:10px;white-space:nowrap}
-  .disc{margin-top:28px;font-size:11px;color:#6b7799;line-height:1.6;text-align:center;
+  .cs{font-size:12px;color:#9fb0d0;margin-top:4px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .prow{display:flex;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap}
+  .cprice{font-size:13.5px;color:#ffd479;font-weight:800}
+  .badge{font-size:10.5px;font-weight:800;color:#0a0e1a;background:#ff8a5c;padding:2px 7px;border-radius:6px}
+  .badge.best{background:#7fe0c0}
+  .go{flex:none;font-size:12px;font-weight:800;color:#06203f;background:#ffd479;
+      padding:11px 13px;border-radius:11px;white-space:nowrap;box-shadow:0 3px 10px rgba(255,212,121,.18)}
+  .upd{text-align:center;font-size:11.5px;color:#7f8db0;margin-top:20px}
+  .disc{margin-top:14px;font-size:11px;color:#6b7799;line-height:1.6;text-align:center;
         border-top:1px solid #1c2640;padding-top:18px}
-  .sns{text-align:center;margin-top:16px;font-size:12.5px}
-  .sns a{color:#9fb0d0;text-decoration:none}
+  .sns{text-align:center;margin-top:14px;font-size:13px}
+  .sns a{color:#ffd479;text-decoration:none;font-weight:700}
 </style>
 </head>
 <body>
@@ -43,82 +53,89 @@
     <div class="logo">🔬</div>
     <div class="name">가젯연구소 <b>GADGET LAB</b></div>
     <div class="desc">직접 써보고 고른 가성비 IT·가전·가젯<br>솔직 후기 큐레이션</div>
-    <div class="tag">⌨ 오늘의 추천템</div>
+    <span class="tag">⌨ 가성비템만 골라드림</span>
+    <a class="follow" href="https://instagram.com/gajesyeonguso" target="_blank" rel="noopener">📸 팔로우</a>
   </div>
 
-  <div class="sec">🔥 추천 제품</div>
+  <div class="lead">👇 아래 제품 전부 <b style="color:#ffd479">쿠팡 최저가로 바로 연결</b>됩니다</div>
 
-  <!-- 제품 카드: 새 제품은 이 블록을 복사해서 추가 -->
-  <a class="card" href="https://coupa.ng/cnhpyH" target="_blank" rel="noopener">
-    <img class="thumb" src="aula.png" alt="독거미 AULA F87 Pro"/>
+  <div class="sec">🔥 여름 필수템<span class="line"></span></div>
+
+  <a class="card hot" href="https://link.coupang.com/a/eywg7bVyKW" target="_blank" rel="noopener">
+    <img class="thumb" src="homeplanet_handfan.jpg" alt="홈플래닛 급속냉각 휴대용 손선풍기" loading="lazy"/>
     <div class="ci">
-      <div class="ct">독거미 AULA F87 Pro</div>
-      <div class="cs">무선 기계식 · 87키 · 공장윤활 · 저소음</div>
-      <div class="cprice">3~4만원대</div>
+      <div class="ct">홈플래닛 급속냉각 손선풍기</div>
+      <div class="cs">급속냉각 콜드패드 · 다단 풍속 · USB-C · 목걸이 스트랩</div>
+      <div class="prow"><span class="cprice">12,900원</span><span class="badge">40% 할인</span></div>
     </div>
-    <div class="go">쿠팡 →</div>
+    <div class="go">쿠팡 최저가 →</div>
   </a>
-  <a class="card" href="https://link.coupang.com/a/eywg7bVyKW" target="_blank" rel="noopener">
-    <img class="thumb" src="homeplanet_handfan.jpg" alt="홈플래닛 급속냉각 휴대용 손선풍기"/>
+  <a class="card hot" href="https://coupa.ng/cnqiqf" target="_blank" rel="noopener">
+    <img class="thumb" src="deluma_neckfan.png" alt="더루마 시원하넥 넥밴드 선풍기" loading="lazy"/>
     <div class="ci">
-      <div class="ct">홈플래닛 급속냉각 휴대용 손선풍기</div>
-      <div class="cs">급속냉각 콜드 패드, 다단 풍속, USB-C 충전, 목걸이 스트랩 포함,</div>
-      <div class="cprice">12,900원 (40% 할인)</div>
+      <div class="ct">더루마 시원하넥 넥밴드 선풍기</div>
+      <div class="cs">KC인증 · 목걸이형 핸즈프리 · 저소음 · 풍량조절 · 충전식</div>
+      <div class="prow"><span class="cprice">1만원대</span><span class="badge best">핸즈프리</span></div>
     </div>
-    <div class="go">쿠팡 →</div>
+    <div class="go">쿠팡 최저가 →</div>
+  </a>
+
+  <div class="sec">✨ 인기 가젯<span class="line"></span></div>
+
+  <a class="card" href="https://coupa.ng/cnhpyH" target="_blank" rel="noopener">
+    <img class="thumb" src="aula.png" alt="독거미 AULA F87 Pro" loading="lazy"/>
+    <div class="ci">
+      <div class="ct">독거미 AULA F87 Pro 키보드</div>
+      <div class="cs">무선 기계식 · 87키 · 공장윤활 · 저소음 타건감</div>
+      <div class="prow"><span class="cprice">3~4만원대</span><span class="badge best">입문 BEST</span></div>
+    </div>
+    <div class="go">쿠팡 최저가 →</div>
   </a>
   <a class="card" href="https://coupa.ng/cnqimD" target="_blank" rel="noopener">
-    <img class="thumb" src="samsung_smarttag2.jpg" alt="삼성전자 갤럭시 스마트태그2 위치 추적기 EI-T5600 화이트"/>
+    <img class="thumb" src="samsung_smarttag2.jpg" alt="삼성 갤럭시 스마트태그2" loading="lazy"/>
     <div class="ci">
-      <div class="ct">삼성전자 갤럭시 스마트태그2 위치 추적기 EI-T5600 화이트</div>
-      <div class="cs">갤럭시 SmartThings Find 연동, 블루투스 위치추적, 분실모드</div>
-      <div class="cprice">2만원대</div>
+      <div class="ct">삼성 갤럭시 스마트태그2</div>
+      <div class="cs">SmartThings Find 연동 · 블루투스 위치추적 · 분실모드</div>
+      <div class="prow"><span class="cprice">2만원대</span></div>
     </div>
-    <div class="go">쿠팡 →</div>
-  </a>
-  <a class="card" href="https://coupa.ng/cnqiqf" target="_blank" rel="noopener">
-    <img class="thumb" src="deluma_neckfan.png" alt="더루마 시원하넥 넥밴드 선풍기 저소음 휴대용 목선풍기 퓨어화이트"/>
-    <div class="ci">
-      <div class="ct">더루마 시원하넥 넥밴드 선풍기 저소음 휴대용 목선풍기 퓨어화이트</div>
-      <div class="cs">KC인증, 목걸이형 핸즈프리, 저소음, 휴대용, 충전식, 풍량조절</div>
-      <div class="cprice">1만원대</div>
-    </div>
-    <div class="go">쿠팡 →</div>
+    <div class="go">쿠팡 최저가 →</div>
   </a>
   <a class="card" href="https://coupa.ng/cnqist" target="_blank" rel="noopener">
-    <img class="thumb" src="handy_vac.jpg" alt="디에스가추몰 무선 핸디 청소기 차량 가정 겸용 AS 228 블랙"/>
+    <img class="thumb" src="handy_vac.jpg" alt="무선 핸디 청소기" loading="lazy"/>
     <div class="ci">
-      <div class="ct">디에스가추몰 무선 핸디 청소기 차량 가정 겸용 AS 228 블랙</div>
-      <div class="cs">무선 충전식, 차량·가정 겸용, 강력 흡입, 틈새 노즐, 휴대용 경량</div>
-      <div class="cprice">2만원대</div>
+      <div class="ct">무선 핸디 청소기 (차량·가정)</div>
+      <div class="cs">무선 충전식 · 강력 흡입 · 틈새 노즐 · 휴대용 경량</div>
+      <div class="prow"><span class="cprice">2만원대</span></div>
     </div>
-    <div class="go">쿠팡 →</div>
+    <div class="go">쿠팡 최저가 →</div>
   </a>
   <a class="card" href="https://link.coupang.com/a/eLCSuxyaGq" target="_blank" rel="noopener">
-    <img class="thumb" src="galaxy_projector.jpg" alt="아오라 우주빔 무선 무드등, 블랙"/>
+    <img class="thumb" src="galaxy_projector.jpg" alt="아오라 우주빔 무선 무드등" loading="lazy"/>
     <div class="ci">
-      <div class="ct">아오라 우주빔 무선 무드등, 블랙</div>
-      <div class="cs">은하수·오로라 천장 투사, 리모컨/타이머, 블루투스 스피커 내장, 색·밝</div>
-      <div class="cprice">79,900원</div>
+      <div class="ct">아오라 우주빔 무선 무드등</div>
+      <div class="cs">은하수·오로라 천장 투사 · 블루투스 스피커 내장 · 리모컨</div>
+      <div class="prow"><span class="cprice">79,900원</span><span class="badge best">분위기템</span></div>
     </div>
-    <div class="go">쿠팡 →</div>
+    <div class="go">쿠팡 최저가 →</div>
   </a>
   <a class="card" href="https://link.coupang.com/a/eLC1Ze71l6" target="_blank" rel="noopener">
-    <img class="thumb" src="multi_pen.jpg" alt="디이펙트 만능 터치펜, 2개, 블랙"/>
+    <img class="thumb" src="multi_pen.jpg" alt="디이펙트 만능 터치펜 2개" loading="lazy"/>
     <div class="ci">
-      <div class="ct">디이펙트 만능 터치펜, 2개, 블랙</div>
-      <div class="cs">다기능 일체형 펜(필기+α), 휴대용</div>
-      <div class="cprice">13,900원</div>
+      <div class="ct">디이펙트 만능 터치펜 (2개입)</div>
+      <div class="cs">다기능 일체형 펜 · 태블릿·폰 호환 · 휴대용</div>
+      <div class="prow"><span class="cprice">13,900원</span></div>
     </div>
-    <div class="go">쿠팡 →</div>
+    <div class="go">쿠팡 최저가 →</div>
   </a>
-  <!-- /제품 카드 -->
+
+  <div class="upd">🗓 매주 새 가성비템 업데이트 · 즐겨찾기 추천</div>
+
+  <div class="sns">📸 더 많은 가젯 <a href="https://instagram.com/gajesyeonguso" target="_blank" rel="noopener">@gajesyeonguso</a> 팔로우</div>
 
   <div class="disc">
     이 페이지의 링크는 쿠팡 파트너스 활동의 일환으로,<br>
     이에 따른 일정액의 수수료를 제공받습니다.
   </div>
-  <div class="sns"><a href="https://instagram.com/gajesyeonguso" target="_blank">@gajesyeonguso</a></div>
 </div>
 </body>
 </html>
